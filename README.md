@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-# CareForYouWebapp
-Within two days, this repository will be updated.
-=======
-# WEBCHAT
-#THIS PROJECT IS SIMILAR TO CAREFORYOU BUT BUILT IN WEB TECH STACKS RATHER THAN ANDROID WITH JAVA
->>>>>>> b2d0dfd6929e2230225e38149861e58206d57f4c
