@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>
+            Demo
+        </title>
+    </head>
+    <body>
+        <h1> Main Page </h1>
+        <a class = "button" href = "{{ url_for('login',flag = 1) }}" > Google Login For Admin </a> <br> <br>
+         <a class = "button" href = "{{ url_for('login',flag = 2) }}"> Google Login For Doctor </a> <br> <br>  
+        <a class = "button" href = "{{ url_for('login',flag = 3) }}"> Google Login For Student </a> <br> <br>
+
+    <a class = "button" href = "{{ url_for('doctorclick')}}"> Doctor Apply</a>
+
+    </body>
+    </html>

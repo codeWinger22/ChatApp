@@ -1,0 +1,72 @@
+{% extends 'admin_base.html' %}
+{% block content %}
+
+
+<head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+  </style>
+</head>
+<!--
+written By : sumit kumar
+facebook : fb.com/sumit.luv
+-->
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h6 class="panel-title">Doctors &nbsp Applied For Registration</h6>
+    </div>
+
+    <table class="table table-hover" id="dev-table">
+      <thead>
+
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>Qualification</th>
+          <th>Approve</th>
+          <th>Reject</th>
+        </tr>
+      </thead>
+      {% for i in data %}
+      <tr>
+        <td> {{i['id']}}</td>
+        <td>{{i['name']}} </td>
+        <td>{{i['email']}}</td>
+        <td>{{i['address']}}</td>
+        <td>{{i['qualification']}}</td>
+
+        <td><a class="btn btn-primary btn-xs" href="{{ url_for('approveddoctorUpdate',doctorid =i['id'] ) }}"><span class="glyphicon glyphicon-ok"></span></a></td>
+        <td><a class="btn btn-danger btn-xs" href="{{ url_for('approveddoctorDelete',doctorid = i['id']) }}"><span class="glyphicon glyphicon-trash"></span></a></td>
+
+      </tr>
+
+      {% endfor %}
+    </table>
+
+  </div>
+
+
+</div>
+<!--
+developed By : sumit kumar
+facebook : fb.com/sumit.luv
+youtube : youtube.com/lazycoders
+-->
+
+{% endblock content %}
